@@ -1,7 +1,7 @@
 //'Bulbasaur', 'Ivysaur', 'Venusaur'
 let pokemonList = []
 
-pokemonList(
+pokemonList = [
     {
         name: "Bulbasaur",
         height: 0.7,
@@ -17,7 +17,7 @@ pokemonList(
         height: 2,
         types: ['grass', 'poison']
     }
-);
+];
 
 
 

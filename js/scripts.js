@@ -1,18 +1,18 @@
 // Pokemon list with properties inside IIFE
 
-var pokemonRepository = (function () {
+let pokemonRepository = (function () {
     let pokemonList = [];
 
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
+    
 
     // function to add pokemon
     function add(pokemon) {
 
         if (
             typeof pokemon === "object" &&
-            "name" in pokemon &&
-            "height" in pokemon &&
-            "types" in pokemon
+            "name" in pokemon 
         ) {
             pokemonList.push(pokemon);
         } else {
@@ -26,19 +26,18 @@ var pokemonRepository = (function () {
 
     // created list items as buttons
     function addListItem(pokemon) {
-        let pokemonList = document.querySelector
-            (".pokemon-list");
+        let pokemonList = document.querySelector(".pokemon-list");
         let listpokemon = document.createElement("li");
         let button = document.createElement("button");
         button.innerText = pokemon.name;
         button.classList.add("button-class");
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon);
-        // event listener "click" for each button 
-        button.addEventListener("click", function (event) {
-            showDetails(pokemon);
+        button.addEventListener("click", function(event) {
+        showDetails(pokemon);
         });
-    }
+        }
+        
 
 
 

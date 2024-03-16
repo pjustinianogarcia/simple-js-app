@@ -3,7 +3,7 @@ let modal = (function() {
   
     let modalContainer = document.querySelector('#modal-container');
     
-    function showModal(title, text) {
+    function showModal(title, text, image) {
       modalContainer.innerHTML = '';
       let modal = document.createElement('div');
       modal.classList.add('modal');
@@ -17,11 +17,15 @@ let modal = (function() {
       titleElement.innerText = title;
   
       let contentElement = document.createElement('p');
-      contentElement.innerText = text;
+      contentElement.innerText = "Height: " + text;
+
+      let imageElement = document.createElement('img');
+      imageElement.src = image;
   
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(contentElement);
+      modal.appendChild(imageElement);
       modalContainer.appendChild(modal);
       
       modalContainer.classList.add('is-visible');
@@ -138,7 +142,8 @@ let pokemonRepository = (function () {
         pokemonRepository.loadDetails(item).then(function (pokemonDetails) {
         
             console.log(pokemonDetails)
-            modal.showModal(pokemonDetails.name, pokemonDetails.height);
+           
+            modal.showModal(pokemonDetails.name, pokemonDetails.height, pokemonDetails.imageUrl);
             
         });
     }

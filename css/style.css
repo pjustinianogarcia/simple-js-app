@@ -77,3 +77,9 @@ body {
   /* CSS for modal container - add your own desired CSS styles here */
   display: block;
 }
+
+.pokemon-image {
+  max-width: 100%; 
+  height: auto; 
+}
+

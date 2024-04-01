@@ -1,4 +1,7 @@
-# Pokedex - JavaScript Applicatiion ! [image of pokeball] (/img/Screenshot 2024-03-27 120449.png)
+# Pokedex - JavaScript Applicatiion 
+## Description
+
+A small web application that pulls data from [pokeapi.co](pokeapi.co) and displays a list of Pokemons inside a button. This buttons include an **onclick** event that opens Bootstrap card for each pokemon containig it's details.
 
 ## Languages and Frameworks
 - HTML
@@ -6,7 +9,10 @@
 - JavaScript
 - Bootstrap
 
-## Description
+## API
+[Pokeapi.co](pokeapi.co)
 
-A small web application that pulls data from pokeapi.co(pokeapi.co) and displays a list of Pokemons inside a button. This buttons include an **onclick** event that opens Bootstrap card for each pokemon containig it's details.
+
+
+
 
